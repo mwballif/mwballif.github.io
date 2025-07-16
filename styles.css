@@ -1,0 +1,212 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background-color: #FFFFFF;
+    color: rgb(39, 39, 39);
+    line-height: 1.6;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Container and layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.main-title {
+    font-size: 2em;
+    font-weight: 400;
+    color: rgb(39, 39, 39);
+}
+
+.top-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.top-nav a {
+    color: rgb(26, 13, 171);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.top-nav a:hover {
+    color: rgb(26, 13, 171);
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    margin-top: 2rem;
+}
+
+/* Home page layout */
+.home-content {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.left-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.cv-link, .email-link {
+    color: rgb(26, 13, 171);
+    text-decoration: none;
+}
+
+.cv-link:hover, .email-link:hover {
+    color: rgb(26, 13, 171);
+    text-decoration: underline;
+}
+
+.right-section {
+    flex: 0 0 300px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+}
+
+/* Blog list styles */
+.blog-list h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgb(39, 39, 39);
+}
+
+/* Research page styles */
+.research-content h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgb(39, 39, 39);
+}
+
+.research-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.blog-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.blog-entry {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.date {
+    font-size: 1em;
+    color: rgb(39, 39, 39);
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.separator {
+    color: rgb(39, 39, 39);
+    font-size: 1em;
+}
+
+.blog-entry .title {
+    color: rgb(26, 13, 171);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.blog-entry .title:hover {
+    color: rgb(26, 13, 171);
+    text-decoration: underline;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .main-title {
+        font-size: 2em;
+    }
+    
+    .top-nav {
+        gap: 1rem;
+    }
+    
+    .home-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .right-section {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .blog-entry {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .date {
+        min-width: auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    .top-nav {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+} 
