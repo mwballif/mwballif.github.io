@@ -1,6 +1,6 @@
-# Minimalist Portfolio Website
+# Mitchell Ballif's Portfolio
 
-A clean, minimalist portfolio website inspired by the Jie Fang Blog design. Built with vanilla HTML and CSS for maximum simplicity and performance.
+A clean, minimalist portfolio website showcasing my work in labor economics and machine learning. Built with vanilla HTML and CSS for maximum simplicity and performance.
 
 ## Features
 
@@ -30,13 +30,11 @@ portfolio/
 └── README.md           # This file
 ```
 
-## Customization
+## About Me
 
-### Personal Information
-1. Update the title in `index.html` (line 6)
-2. Change "Mitchell" to your name in the header (line 15)
-3. Update the about section content (lines 35-38)
-4. Modify navigation links (lines 16-18)
+I'm an undergraduate at Brigham Young University studying Economics and Mathematics. My research interests focus on labor economics and machine learning, particularly understanding how labor markets function and developing tools to analyze economic data.
+
+## Customization
 
 ### Blog Posts
 1. Add new posts in the `posts/` directory
@@ -57,9 +55,9 @@ portfolio/
 ## Getting Started
 
 1. Open `index.html` in your web browser
-2. Customize the content to match your information
-3. Add your own blog posts
-4. Deploy to your preferred hosting service
+2. Add your own blog posts using the `create-post.sh` script
+3. Update research content as needed
+4. Deploy to GitHub Pages or your preferred hosting service
 
 ## Browser Support
 
