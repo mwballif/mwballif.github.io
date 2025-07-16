@@ -30,7 +30,7 @@ header {
 }
 
 .main-title {
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 400;
     color: rgb(39, 39, 39);
 }
@@ -96,7 +96,7 @@ main {
 
 /* Blog list styles */
 .blog-list h2 {
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: 400;
     margin-bottom: 2rem;
     color: rgb(39, 39, 39);
@@ -104,7 +104,7 @@ main {
 
 /* Research page styles */
 .research-content h2 {
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: 400;
     margin-bottom: 2rem;
     color: rgb(39, 39, 39);
