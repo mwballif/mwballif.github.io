@@ -54,9 +54,7 @@
 }
 
 .tldr {
-    background-color: #F5F5F5;
-    border-left: 4px solid #0000FF;
-    padding: 1rem;
+    color: rgb(26, 13, 171);
     margin: 2rem 0;
     font-style: italic;
 }

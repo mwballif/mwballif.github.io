@@ -35,6 +35,19 @@ header {
     color: rgb(39, 39, 39);
 }
 
+.back-arrow {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(26, 13, 171);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-arrow:hover {
+    color: rgb(26, 13, 171);
+    text-decoration: underline;
+}
+
 .top-nav {
     display: flex;
     gap: 2rem;
