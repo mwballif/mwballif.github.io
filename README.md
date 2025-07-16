@@ -1,15 +1,8 @@
 # Mitchell Ballif's Portfolio
 
-A clean, minimalist portfolio website showcasing my work in labor economics and machine learning. Built with vanilla HTML and CSS for maximum simplicity and performance.
+A custom home for my research and contact info. Handcoded with vanilla HTML and CSS.
+Readme build with AI
 
-## Features
-
-- **Minimalist Design**: Clean, distraction-free layout with generous whitespace
-- **Monospace Typography**: Technical, readable font styling
-- **Responsive Layout**: Works well on desktop and mobile devices
-- **Blog Structure**: Chronological blog post listing with individual post pages
-- **Fast Loading**: Minimal assets, optimized for speed
-- **Accessible**: Clean structure and semantic HTML
 
 ## Design Elements
 
@@ -64,14 +57,3 @@ I'm an undergraduate at Brigham Young University studying Economics and Mathemat
 - Modern browsers (Chrome, Firefox, Safari, Edge)
 - Responsive design for mobile devices
 - Print-friendly styles included
-
-## Performance
-
-- No external dependencies
-- Minimal CSS and HTML
-- Fast loading times
-- SEO-friendly structure
-
-## License
-
-This project is open source and available under the MIT License. # Test commit
