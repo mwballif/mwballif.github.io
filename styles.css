@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'Inconsolata', monospace;
+    font-family: "Fragment Mono", monospace;
     background-color: #FFFFFF;
     color: rgb(39, 39, 39);
-    line-height: 1.6;
-    font-size: 1em;
+    line-height: 1.4;
+    font-size: 0.8em;
     font-weight: 400;
 }
 
@@ -30,13 +30,13 @@ header {
 }
 
 .main-title {
-    font-size: 1.3em;
+    font-size: 0.8em;
     font-weight: 400;
     color: rgb(39, 39, 39);
 }
 
 .back-arrow {
-    font-size: 1rem;
+    font-size: 0.8em;
     font-weight: 400;
     color: rgb(26, 13, 171);
     text-decoration: none;
@@ -56,7 +56,7 @@ header {
 .top-nav a {
     color: rgb(26, 13, 171);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8em;
 }
 
 .top-nav a:hover {
@@ -84,8 +84,8 @@ main {
 
 .left-section p {
     margin-bottom: 1.5rem;
-    line-height: 1.7;
-    font-size: 1em;
+    line-height: 1.5;
+    font-size: 0.8em;
     font-weight: 400;
 }
 
@@ -111,7 +111,7 @@ main {
 
 /* Blog list styles */
 .blog-list h2 {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 400;
     margin-bottom: 2rem;
     color: rgb(39, 39, 39);
@@ -119,7 +119,7 @@ main {
 
 /* Research page styles */
 .research-content h2 {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 400;
     margin-bottom: 2rem;
     color: rgb(39, 39, 39);
@@ -144,7 +144,7 @@ main {
 }
 
 .date {
-    font-size: 1em;
+    font-size: 0.8em;
     color: rgb(39, 39, 39);
     min-width: 100px;
     flex-shrink: 0;
@@ -152,13 +152,13 @@ main {
 
 .separator {
     color: rgb(39, 39, 39);
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .blog-entry .title {
     color: rgb(26, 13, 171);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .blog-entry .title:hover {
