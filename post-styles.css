@@ -6,7 +6,7 @@
 .back-link {
     color: rgb(26, 13, 171);
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 0.9em;
     transition: color 0.2s ease;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .post-title {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 400;
     margin-bottom: 1rem;
     color: rgb(39, 39, 39);
@@ -33,13 +33,13 @@
 .post-date {
     font-style: italic;
     color: #666666;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .post-body {
     line-height: 1.5;
     font-weight: 400;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .post-body p {
@@ -47,7 +47,7 @@
 }
 
 .post-body h2 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 400;
     margin: 2.5rem 0 1rem 0;
     color: rgb(39, 39, 39);
