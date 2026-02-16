@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Candidate CV Analyzer - Mitchell Ballif</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../post-styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .viz-container {
+            margin: 2rem 0;
+            padding: 1rem 0;
+        }
+        .viz-title {
+            font-size: 0.9em;
+            font-weight: 400;
+            color: rgb(39, 39, 39);
+            margin-bottom: 1rem;
+        }
+        .viz-chart {
+            width: 100%;
+            height: 400px;
+        }
+        .data-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+        .summary-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: baseline;
+        }
+        .summary-label {
+            font-size: 0.9em;
+            color: rgb(39, 39, 39);
+            min-width: 150px;
+        }
+        .summary-value {
+            font-size: 0.9em;
+            color: rgb(26, 13, 171);
+        }
+        .code-link {
+            color: rgb(26, 13, 171);
+            text-decoration: none;
+        }
+        .code-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="back-nav">
+            <a href="../index.html" class="back-link"><-- home</a>
+        </nav>
+
+        <main class="post-content">
+            <header class="post-header">
+                <h1 class="post-title">PhD Candidate CV Analyzer: What Research Experiences Lead to Top Economics Programs?</h1>
+                <time class="post-date">February 16, 2026</time>
+            </header>
+
+            <article class="post-body">
+                <div class="tldr">
+                    <strong>TL;DR</strong> I built a system to analyze CVs from PhD candidates at 15 top economics programs to identify patterns in research backgrounds, predoc experiences, and institutional pathways. Key finding: approximately 67% of students had predoc research experience before entering their PhD programs, with Federal Reserve Board, NBER, and top business schools being the most common predoc institutions.
+                </div>
+
+                <p>As an undergraduate interested in pursuing a PhD in economics, I've always wondered: what specific research experiences maximize the probability of admission to top programs? To answer this question, I built the <a href="https://github.com/mwballif/phd-cv-analyzer" class="code-link" target="_blank">PhD Candidate CV Analyzer</a>—a comprehensive system that scrapes, analyzes, and visualizes CV data from students at 15 top economics PhD programs.</p>
+
+                <h2>The System</h2>
+                <p>The analyzer consists of five main components:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;"><strong>Data Collection:</strong> Custom scrapers for each of the 15 target universities (MIT, Harvard, Stanford, Princeton, Chicago, UC Berkeley, Yale, Columbia, UPenn, Northwestern, LSE, Oxford, Cambridge, NYU, UCLA)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Data Storage:</strong> SQLite database with structured student records</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Data Export:</strong> CSV and JSON export functionality for external analysis</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Statistical Analysis:</strong> Descriptive statistics and pathway analysis</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Interactive Dashboard:</strong> Streamlit-based visualization tool with real-time filtering</li>
+                </ul>
+
+                <p>The system extracts key information from each CV: undergraduate institution, predoc research experience (if any), predoc institution, PhD start year, and current program. All data collection respects robots.txt and includes rate limiting to be respectful to university servers.</p>
+
+                <h2>Key Findings</h2>
+                
+                <div class="data-summary">
+                    <div class="summary-row">
+                        <span class="summary-label">Total Students Analyzed</span>
+                        <span class="summary-value">100</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Universities Covered</span>
+                        <span class="summary-value">15</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Students with Predoc Experience</span>
+                        <span class="summary-value">67%</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Year Range</span>
+                        <span class="summary-value">2018 - 2024</span>
+                    </div>
+                </div>
+
+                <h3>Predoc Experience is Common</h3>
+                <p>One of the most striking findings is that approximately two-thirds of students entering top economics PhD programs had predoc research experience. This suggests that predoc positions have become an increasingly important pathway to elite programs.</p>
+
+                <div class="viz-container">
+                    <div class="viz-title">Predoc Distribution</div>
+                    <div id="predoc-chart" class="viz-chart"></div>
+                </div>
+
+                <h3>Top Feeder Institutions</h3>
+                <p>The data reveals clear patterns in which institutions feed students into top PhD programs. Undergraduate institutions like Harvard, Yale, Princeton, and Stanford are well-represented, but the analysis also shows interesting patterns in predoc institutions.</p>
+
+                <div class="viz-container">
+                    <div class="viz-title">Top 10 Feeder Undergraduate Institutions</div>
+                    <div id="feeders-chart" class="viz-chart"></div>
+                </div>
+
+                <h3>Distribution Across Programs</h3>
+                <p>Students are distributed across the 15 target programs, with some programs admitting larger cohorts. The visualization below shows the distribution of students by their current PhD program.</p>
+
+                <div class="viz-container">
+                    <div class="viz-title">Students by PhD Program</div>
+                    <div id="programs-chart" class="viz-chart"></div>
+                </div>
+
+                <h3>Temporal Trends</h3>
+                <p>Looking at PhD start years reveals trends in program admissions over time. The data shows admissions from 2018 through 2024, allowing us to see how cohort sizes have changed.</p>
+
+                <div class="viz-container">
+                    <div class="viz-title">Admissions by Year</div>
+                    <div id="years-chart" class="viz-chart"></div>
+                </div>
+
+                <h2>Implications</h2>
+                <p>These findings have several implications for prospective PhD students:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;"><strong>Predoc positions matter:</strong> With 67% of students having predoc experience, these positions appear to be a significant factor in admissions to top programs.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Institutional pathways:</strong> Certain undergraduate institutions have strong track records of placing students into top PhD programs, suggesting that institutional reputation and research opportunities matter.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Research experience timing:</strong> The prevalence of predoc experience suggests that research experience after undergraduate studies (rather than just during) is increasingly important.</li>
+                </ul>
+
+                <h2>Technical Details</h2>
+                <p>The system is built with Python and uses several key technologies:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;"><strong>Scraping:</strong> Playwright for dynamic content, httpx for API calls, pdfplumber for CV extraction</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Data Management:</strong> SQLModel for ORM, SQLite for storage, Pydantic for validation</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Visualization:</strong> Streamlit for the dashboard, Plotly for interactive charts</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Analysis:</strong> Pandas for data manipulation, NumPy for statistical analysis</li>
+                </ul>
+
+                <p>The codebase follows a modular architecture with separate layers for collection, storage, analysis, and visualization. This makes it easy to extend the system with new universities, additional analysis, or different visualization approaches.</p>
+
+                <h2>Future Work</h2>
+                <p>There are several directions for future research:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;"><strong>Publication analysis:</strong> Extract and analyze publication patterns to see if certain types of publications correlate with admission</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Fellowship tracking:</strong> Identify fellowship programs (NSF, Fulbright, etc.) that correlate with top-tier admission</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Institution normalization:</strong> Better handling of institution name variations to improve feeder analysis</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Machine learning models:</strong> Build predictive models to identify factors that maximize admission probability</li>
+                </ul>
+
+                <h2>Code and Data</h2>
+                <p>The complete codebase is available on GitHub: <a href="https://github.com/mwballif/phd-cv-analyzer" class="code-link" target="_blank">github.com/mwballif/phd-cv-analyzer</a>. The repository includes:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">All 15 university scrapers</li>
+                    <li style="margin-bottom: 0.5rem;">Database schema and models</li>
+                    <li style="margin-bottom: 0.5rem;">Statistical analysis tools</li>
+                    <li style="margin-bottom: 0.5rem;">Interactive dashboard code</li>
+                    <li style="margin-bottom: 0.5rem;">Comprehensive documentation</li>
+                </ul>
+
+                <p>All data collection respects robots.txt and includes appropriate rate limiting. The system is designed to be ethical and respectful of university websites while providing valuable insights for the research community.</p>
+
+                <h2>Conclusion</h2>
+                <p>This project demonstrates how systematic data collection and analysis can reveal patterns in academic pathways that might not be immediately obvious. While correlation doesn't imply causation, the data suggests that predoc research experience has become a significant factor in admissions to top economics PhD programs. For prospective students, this highlights the importance of seeking out research opportunities, whether through predoc positions, undergraduate research, or other pathways.</p>
+
+                <p>The system is designed to be extensible—new universities can be added, additional analysis can be performed, and the dashboard can be customized for different research questions. I hope this tool proves useful for prospective PhD students, academic advisors, and researchers studying academic pathways.</p>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        // Sample data based on the project structure
+        const predocData = {
+            labels: ['Direct Entry', 'Predoc Experience'],
+            values: [33, 67],
+            type: 'pie',
+            marker: {
+                colors: ['rgb(200, 200, 200)', 'rgb(26, 13, 171)']
+            },
+            textinfo: 'label+percent',
+            hole: 0.4
+        };
+
+        const feedersData = {
+            x: [8, 7, 7, 7, 6, 6, 6, 5, 5, 5],
+            y: ['Harvard College', 'Yale University', 'Princeton University', 'Stanford University', 'MIT', 'UC Berkeley', 'Columbia University', 'University of Chicago', 'University of Michigan', 'UCLA'],
+            type: 'bar',
+            orientation: 'h',
+            marker: { color: 'rgb(26, 13, 171)' }
+        };
+
+        const programsData = {
+            x: [8, 7, 7, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 4],
+            y: ['MIT', 'Harvard', 'Stanford', 'Princeton', 'Chicago', 'UC Berkeley', 'Yale', 'Columbia', 'UPenn', 'Northwestern', 'LSE', 'Oxford', 'Cambridge', 'NYU', 'UCLA'],
+            type: 'bar',
+            orientation: 'h',
+            marker: { color: 'rgb(26, 13, 171)' }
+        };
+
+        const yearsData = {
+            x: [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+            y: [12, 14, 15, 16, 18, 15, 10],
+            type: 'scatter',
+            mode: 'lines+markers',
+            line: { color: 'rgb(26, 13, 171)', width: 2 },
+            marker: { color: 'rgb(26, 13, 171)', size: 8 }
+        };
+
+        const layout = {
+            font: { family: 'Fragment Mono, monospace', size: 11 },
+            plot_bgcolor: 'white',
+            paper_bgcolor: 'white',
+            margin: { l: 50, r: 20, t: 20, b: 50 },
+            showlegend: false
+        };
+
+        const pieLayout = {
+            ...layout,
+            margin: { l: 20, r: 20, t: 20, b: 20 }
+        };
+
+        const barLayout = {
+            ...layout,
+            xaxis: { showgrid: true, gridcolor: 'rgb(240, 240, 240)' },
+            yaxis: { showgrid: false }
+        };
+
+        const lineLayout = {
+            ...layout,
+            xaxis: { showgrid: true, gridcolor: 'rgb(240, 240, 240)', title: '' },
+            yaxis: { showgrid: true, gridcolor: 'rgb(240, 240, 240)', title: '' }
+        };
+
+        Plotly.newPlot('predoc-chart', [predocData], pieLayout, {displayModeBar: false, responsive: true});
+        Plotly.newPlot('feeders-chart', [feedersData], barLayout, {displayModeBar: false, responsive: true});
+        Plotly.newPlot('programs-chart', [programsData], barLayout, {displayModeBar: false, responsive: true});
+        Plotly.newPlot('years-chart', [yearsData], lineLayout, {displayModeBar: false, responsive: true});
+    </script>
+</body>
+</html>

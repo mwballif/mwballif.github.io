@@ -10,15 +10,15 @@ body {
     background-color: #FFFFFF;
     color: rgb(39, 39, 39);
     line-height: 1.4;
-    font-size: 0.8em;
+    font-size: 1.05em;
     font-weight: 400;
 }
 
 /* Container and layout */
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin: 0 auto 0 0;
+    padding: 2rem 2rem 2rem 4rem;
 }
 
 /* Header styles */
@@ -30,7 +30,7 @@ header {
 }
 
 .main-title {
-    font-size: 0.9em;
+    font-size: 1.15em;
     font-weight: 400;
     color: rgb(39, 39, 39);
 }
@@ -105,7 +105,7 @@ main {
 }
 
 .profile-photo {
-    width: 64%;
+    width: 78%;
     height: auto;
 }
 
