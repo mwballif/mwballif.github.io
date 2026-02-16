@@ -1,0 +1,13 @@
+<header>
+  {{ if .IsHome }}
+    <h1 class="main-title">{{ .Site.Title }}</h1>
+  {{ else }}
+    <a href="{{ "/" | relURL }}" class="back-arrow"><-- home</a>
+  {{ end }}
+  <nav class="top-nav">
+    <a href="{{ .Site.Params.cv_url | relURL }}" target="_blank">cv</a>
+    <a href="{{ "research" | relURL }}">research</a>
+    <a href="{{ "code" | relURL }}">code</a>
+    <a href="{{ "blog" | relURL }}">blog</a>
+  </nav>
+</header>

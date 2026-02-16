@@ -1,0 +1,19 @@
+baseURL = "https://mwballif.github.io/"
+languageCode = "en-us"
+title = "Mitchell Ballif"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  cv_url = "Ballif - April- Resume.pdf"
+  email = "mwballif@byu.edu"
+  profile_image = "L1380479-2 2.jpeg"
+
+[taxonomies]
+  # none needed for simple blog
+
+[outputs]
+  home = ["HTML", "RSS"]

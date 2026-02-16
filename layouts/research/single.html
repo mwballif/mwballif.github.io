@@ -1,0 +1,14 @@
+{{ define "title" }}Research - {{ .Site.Title }}{{ end }}
+
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="research-content">
+    <h2>Research</h2>
+    <div class="research-entries">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}

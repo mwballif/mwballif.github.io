@@ -1,0 +1,16 @@
+<script>
+  const predocData = { labels: ['Direct Entry', 'Predoc Experience'], values: [33, 67], type: 'pie', marker: { colors: ['rgb(200, 200, 200)', 'rgb(26, 13, 171)'] }, textinfo: 'label+percent', hole: 0.4 };
+  const predocInstitutionsData = { x: [12, 11, 11, 11, 11, 11], y: ['Federal Reserve Board', 'NBER', 'Stanford GSB', 'Harvard Business School', 'Chicago Booth', 'Princeton University'], type: 'bar', orientation: 'h', marker: { color: 'rgb(26, 13, 171)' } };
+  const programsData = { x: [8, 7, 7, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 4], y: ['MIT', 'Harvard', 'Stanford', 'Princeton', 'Chicago', 'UC Berkeley', 'Yale', 'Columbia', 'UPenn', 'Northwestern', 'LSE', 'Oxford', 'Cambridge', 'NYU', 'UCLA'], type: 'bar', orientation: 'h', marker: { color: 'rgb(26, 13, 171)' } };
+  const yearsData = { x: [2018, 2019, 2020, 2021, 2022, 2023, 2024], y: [12, 14, 15, 16, 18, 15, 10], type: 'scatter', mode: 'lines+markers', line: { color: 'rgb(26, 13, 171)', width: 2 }, marker: { color: 'rgb(26, 13, 171)', size: 8 } };
+  const layout = { font: { family: 'Fragment Mono, monospace', size: 11 }, plot_bgcolor: 'white', paper_bgcolor: 'white', margin: { l: 50, r: 20, t: 20, b: 50 }, showlegend: false };
+  const pieLayout = { ...layout, margin: { l: 20, r: 20, t: 20, b: 20 } };
+  const barLayout = { ...layout, xaxis: { showgrid: true, gridcolor: 'rgb(240, 240, 240)' }, yaxis: { showgrid: false } };
+  const lineLayout = { ...layout, xaxis: { showgrid: true, gridcolor: 'rgb(240, 240, 240)', title: '' }, yaxis: { showgrid: true, gridcolor: 'rgb(240, 240, 240)', title: '' } };
+  document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('predoc-chart')) Plotly.newPlot('predoc-chart', [predocData], pieLayout, { displayModeBar: false, responsive: true });
+    if (document.getElementById('predoc-institutions-chart')) Plotly.newPlot('predoc-institutions-chart', [predocInstitutionsData], barLayout, { displayModeBar: false, responsive: true });
+    if (document.getElementById('programs-chart')) Plotly.newPlot('programs-chart', [programsData], barLayout, { displayModeBar: false, responsive: true });
+    if (document.getElementById('years-chart')) Plotly.newPlot('years-chart', [yearsData], lineLayout, { displayModeBar: false, responsive: true });
+  });
+</script>

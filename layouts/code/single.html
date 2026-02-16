@@ -1,0 +1,21 @@
+{{ define "title" }}Code - {{ .Site.Title }}{{ end }}
+
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="blog-list">
+    <h2>Projects:</h2>
+    <div class="blog-entries">
+      {{ $projects := .Site.Data.Projects }}
+      {{ range $projects }}
+      <article class="blog-entry">
+        <span class="date">{{ .date }}</span>
+        <span class="separator">-</span>
+        <a href="{{ .url }}" target="_blank" class="title">{{ .title }}</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

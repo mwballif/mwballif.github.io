@@ -1,0 +1,8 @@
+{
+  "name": "mwballif.github.io",
+  "private": true,
+  "scripts": {
+    "start": "hugo server",
+    "build": "hugo --minify"
+  }
+}

@@ -30,8 +30,8 @@ header {
 }
 
 .main-title {
-    font-size: 1.15em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 900;
     color: rgb(39, 39, 39);
 }
 
@@ -181,7 +181,7 @@ main {
     }
     
     .main-title {
-        font-size: 2em;
+        font-size: 1em;
     }
     
     .top-nav {
@@ -224,4 +224,4 @@ main {
         max-width: none;
         padding: 0;
     }
-} 
+}
