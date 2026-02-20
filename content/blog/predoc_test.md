@@ -1,5 +1,5 @@
 ---
-title: "PhD Candidate CV Analyzer: What Research Experiences Lead to Top Economics Programs?"
+title: "Predoc Placement"
 date: 2026-02-16
 plotly: true
 ---
@@ -8,7 +8,6 @@ plotly: true
 <strong>TL;DR</strong> System to analyze CVs from 15 top economics PhD programs. ~67% had predoc experience; Fed, NBER, and top business schools are the most common predoc institutions.
 </div>
 
-[PhD Candidate CV Analyzer](https://github.com/mwballif/phd-cv-analyzer): scrapers for 15 programs, SQLite + export, Streamlit dashboard. Extracts undergrad, predoc (yes/no + institution), PhD start year, current program.
 
 ## Key Findings
 
