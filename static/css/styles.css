@@ -18,7 +18,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto 0 0;
-    padding: 2rem 2rem 2rem 4rem;
+    padding: calc(2rem + 24px) 2rem 2rem calc(4rem + 24px);
 }
 
 /* Header styles */
