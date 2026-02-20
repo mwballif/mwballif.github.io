@@ -30,13 +30,13 @@ header {
 }
 
 .main-title {
-    font-size: 1em;
+    font-size: 1.15em;
     font-weight: 900;
     color: rgb(39, 39, 39);
 }
 
 .back-arrow {
-    font-size: 1em;
+    font-size: 1.15em;
     font-weight: 900;
     color: rgb(39, 39, 39);
     text-decoration: none;
