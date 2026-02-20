@@ -1,0 +1,39 @@
+baseURL = 'https://mwballif.github.io/test/'
+languageCode = 'en-us'
+title = 'Mitchell Ballif'
+theme = 'shibui'
+
+[params]
+  email = "your.email@example.com"
+
+  [params.author]
+    name = "Your Name"
+
+  quote = "Insert quote here."
+
+[menus]
+  [[menus.main]]
+    name = 'CV'
+    url = '/Ballif - April- Resume.pdf'
+    weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/posts'
+    weight = 30
+  [[menus.main]]
+    name = 'Code'
+    pageRef = '/code'
+    weight = 40
+  [[menus.main]]
+    name = 'Research'
+    pageRef = '/research'
+    weight = 50
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.93.0'

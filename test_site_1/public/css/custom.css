@@ -1,0 +1,55 @@
+/* Background: #F9FAFB = hsl(210, 20%, 98%) */
+/* Accent: rgb(0.009, 0.004, 0.370) = #02015E */
+:root {
+  --bg-h: 210;
+  --bg-s: 20%;
+  --bg-l: 98%;
+  --color-accent: #1D10A6;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+.terminal-nav nav ul li a {
+  color: var(--color-accent);
+}
+
+.terminal-nav nav ul li a:hover {
+  color: var(--color-accent);
+}
+
+/* Home page profile */
+.home-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.home-profile__photo {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  flex-shrink: 0;
+}
+
+.home-profile__bio {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .home-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
