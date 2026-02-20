@@ -2,7 +2,16 @@
   {{ if .IsHome }}
     <h1 class="main-title">{{ .Site.Title }}</h1>
   {{ else }}
-    <a href="{{ "/" | relURL }}" class="back-arrow"><-- home</a>
+    {{ $path := printf "/%s" .Site.Title }}
+    {{ $sectionTitle := "" }}
+    {{ with .CurrentSection }}
+      {{ $path = printf "%s/%s" $path .Title }}
+      {{ $sectionTitle = .Title }}
+    {{ end }}
+    {{ if ne .Title $sectionTitle }}
+      {{ $path = printf "%s/%s" $path .Title }}
+    {{ end }}
+    <a href="{{ "/" | relURL }}" class="back-arrow">{{ $path }}</a>
   {{ end }}
   <nav class="top-nav">
     <a href="{{ .Site.Params.cv_url | relURL }}" target="_blank">cv</a>
