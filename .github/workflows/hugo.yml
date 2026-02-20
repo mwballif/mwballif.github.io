@@ -34,8 +34,12 @@ jobs:
       - name: Build main site
         run: hugo --minify
 
+      - name: Build test site
+        run: hugo --minify
+        working-directory: test_site_1
+
       - name: Copy test site into output
-        run: cp -r test_site_1 public/test_site_1
+        run: cp -r test_site_1/public public/test
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
