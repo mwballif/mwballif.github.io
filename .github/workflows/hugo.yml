@@ -28,6 +28,9 @@ jobs:
           hugo-version: "latest"
           extended: false
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Build
         run: hugo --minify
 
