@@ -7,8 +7,7 @@
 {{ define "main" }}
   <div class="home-content">
     <div class="left-section">
-      <p>I'm an undergraduate at Brigham Young University studying Economics and Mathematics.</p>
-      <p>Current interests include labor economics, financial economics, and machine learning – specifically shocks to developing labor markets and the tokenization of assets.</p>
+      {{ .Content }}
       <p>You can find my <a href="{{ .Site.Params.cv_url | relURL }}" class="cv-link" target="_blank">CV here</a>.</p>
       <p>Email: <a href="mailto:{{ .Site.Params.email }}" class="email-link">{{ replace .Site.Params.email "@" " at " | replace "." " dot " }}</a></p>
     </div>
