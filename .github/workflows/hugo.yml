@@ -31,8 +31,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Build
+      - name: Build main site
         run: hugo --minify
+
+      - name: Copy test site into output
+        run: cp -r test public/test
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
