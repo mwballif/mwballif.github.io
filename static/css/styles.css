@@ -166,6 +166,100 @@ main {
     text-decoration: underline;
 }
 
+/* Dataset Usage page */
+.dataset-usage-page h2,
+.dataset-usage-page h3 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.dataset-usage-intro {
+    margin-bottom: 1.5rem;
+}
+
+.dataset-controls {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px 160px auto;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.dataset-controls input[type="search"],
+.dataset-controls select {
+    font-family: monospace;
+    font-size: 1em;
+    color: rgb(39, 39, 39);
+    border: 1px solid rgb(39, 39, 39);
+    background-color: #FFFFFF;
+    padding: 0.25rem 0.4rem;
+}
+
+.dataset-gap-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dataset-section {
+    margin-bottom: 1.75rem;
+}
+
+.dataset-opportunities,
+.dataset-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.dataset-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-bottom: 0.25rem;
+}
+
+.dataset-link-button {
+    background: none;
+    border: none;
+    color: rgb(26, 13, 171);
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1em;
+    padding: 0;
+    text-align: left;
+}
+
+.dataset-link-button:hover {
+    text-decoration: underline;
+}
+
+.dataset-meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    color: rgb(39, 39, 39);
+}
+
+.dataset-gap-flag {
+    border: 1px solid rgb(39, 39, 39);
+    padding: 0.05rem 0.3rem;
+}
+
+.dataset-detail {
+    border-top: 1px solid rgb(39, 39, 39);
+    padding-top: 1rem;
+}
+
+.dataset-detail p,
+.dataset-detail ul {
+    margin-top: 0.6rem;
+}
+
+.dataset-detail ul {
+    margin-left: 1.25rem;
+}
 
 
 /* Responsive design */
@@ -207,6 +301,11 @@ main {
     
     .date {
         min-width: auto;
+    }
+
+    .dataset-controls {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
     }
 }
 

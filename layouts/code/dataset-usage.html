@@ -1,0 +1,46 @@
+{{ define "title" }}Dataset Usage - {{ .Site.Title }}{{ end }}
+
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="dataset-usage-page">
+    <h2>Dataset Usage</h2>
+    <p class="dataset-usage-intro">
+      Explore economically relevant datasets, papers using them, methods applied, and research gaps.
+    </p>
+
+    <div class="dataset-controls">
+      <label for="dataset-search">Search</label>
+      <input id="dataset-search" type="search" placeholder="dataset, provider, or description" />
+
+      <label for="dataset-topic">Topic</label>
+      <select id="dataset-topic">
+        <option value="">All topics</option>
+      </select>
+
+      <label class="dataset-gap-toggle" for="dataset-gap-only">
+        <input id="dataset-gap-only" type="checkbox" />
+        Gap opportunities only
+      </label>
+    </div>
+
+    <section class="dataset-section">
+      <h3>Top Opportunities</h3>
+      <div id="dataset-opportunities" class="dataset-opportunities"></div>
+    </section>
+
+    <section class="dataset-section">
+      <h3>Datasets</h3>
+      <div id="dataset-list" class="dataset-list"></div>
+    </section>
+
+    <section class="dataset-section">
+      <h3>Details</h3>
+      <div id="dataset-detail" class="dataset-detail">Select a dataset from the list.</div>
+    </section>
+  </section>
+
+  <script src="{{ "js/dataset-usage.js" | relURL }}"></script>
+{{ end }}

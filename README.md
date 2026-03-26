@@ -20,10 +20,14 @@ A personal site built with [Hugo](https://gohugo.io/). Handcoded styling with va
 
 ## Adding a Code Project
 
-Edit `data/projects.json` and add an entry:
+Edit `data/projects.json` and add an entry inside `projects`:
 
 ```json
-{ "date": "2026 Feb 16", "title": "Project Name", "url": "https://github.com/username/repo" }
+{
+  "projects": [
+    { "date": "2026 Feb 16", "title": "Project Name", "url": "https://github.com/username/repo" }
+  ]
+}
 ```
 
 ## Local Build
@@ -39,6 +43,15 @@ Edit `data/projects.json` and add an entry:
    hugo --minify
    ```
    Output is in `public/`.
+
+## Dataset Usage Page
+
+- Code list now includes an internal project page at `/code/dataset-usage/`.
+- The page reads static data from `static/data/datasets_snapshot.json`.
+- Refresh snapshot from the scraper project:
+  ```bash
+  ./scripts/refresh_dataset_snapshot.sh
+  ```
 
 ## Deploy to GitHub Pages
 
