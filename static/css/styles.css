@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .main-title {
@@ -124,6 +124,11 @@ main {
     line-height: 1.3;
     font-size: 1em;
     font-weight: 400;
+}
+
+.contact-line {
+    color: rgb(26, 13, 171);
+    font-style: italic;
 }
 
 .cv-link, .email-link {
