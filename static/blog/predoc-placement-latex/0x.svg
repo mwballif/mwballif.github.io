@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" width="420" height="220" font-family="serif">
+<g font-size="12" fill="rgb(0,0,0)">
+<text x="150" y="20" text-anchor="end">Federal Reserve Board</text>
+<rect x="155" y="10" width="192" height="14" fill="rgb(26,13,171)"/>
+<text x="352" y="20">12</text>
+
+<text x="150" y="47" text-anchor="end">NBER</text>
+<rect x="155" y="37" width="176" height="14" fill="rgb(26,13,171)"/>
+<text x="336" y="47">11</text>
+
+<text x="150" y="74" text-anchor="end">Stanford GSB</text>
+<rect x="155" y="64" width="176" height="14" fill="rgb(26,13,171)"/>
+<text x="336" y="74">11</text>
+
+<text x="150" y="101" text-anchor="end">Harvard Business School</text>
+<rect x="155" y="91" width="176" height="14" fill="rgb(26,13,171)"/>
+<text x="336" y="101">11</text>
+
+<text x="150" y="128" text-anchor="end">Chicago Booth</text>
+<rect x="155" y="118" width="176" height="14" fill="rgb(26,13,171)"/>
+<text x="336" y="128">11</text>
+
+<text x="150" y="155" text-anchor="end">Princeton University</text>
+<rect x="155" y="145" width="176" height="14" fill="rgb(26,13,171)"/>
+<text x="336" y="155">11</text>
+</g>
+</svg>

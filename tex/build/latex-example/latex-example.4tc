@@ -1,7 +1,0 @@
-\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
-\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Writing in LaTeX}}{1}\relax 
-\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Math}}{1}\relax 
-\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{A TikZ figure}}{1}\relax 
-\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-3001r1}{}{\ignorespaces A simple TikZ line plot in site colors.}}{figure}\relax 
-\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-40004}{QQ2-1-5}{Tables}}{4}\relax 
-\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-4001r1}{}{\ignorespaces Summary statistics.}}{table}\relax 
