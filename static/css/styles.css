@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .main-title {
@@ -103,7 +103,7 @@ header {
 
 /* Main content */
 main {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 /* Home page layout */
@@ -111,7 +111,7 @@ main {
     display: flex;
     gap: 4rem;
     align-items: flex-start;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .left-section {
@@ -126,17 +126,9 @@ main {
     font-weight: 400;
 }
 
-.contact-line {
-    color: rgb(26, 13, 171);
-    font-style: italic;
-}
-
 .cv-link, .email-link {
     color: rgb(26, 13, 171);
     text-decoration: none;
-}
-
-.cv-link {
     font-style: italic;
 }
 
