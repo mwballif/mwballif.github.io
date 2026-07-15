@@ -41,9 +41,9 @@
 body {
     font-family: 'Computer Modern', serif;
     background-color: #FFFFFF;
-    color: rgb(17, 17, 17);
-    line-height: 1.3;
-    font-size: 1.05em;
+    color: rgb(0, 0, 0);
+    line-height: 1.25;
+    font-size: 1em;
     font-weight: 400;
 }
 
@@ -69,19 +69,19 @@ header {
 .main-title {
     font-size: 1.15em;
     font-weight: 900;
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
 }
 
 .back-arrow {
     font-size: 1.15em;
     font-weight: 900;
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     cursor: pointer;
 }
 
 .back-arrow:hover {
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -121,7 +121,7 @@ main {
 
 .left-section p {
     margin-bottom: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.3;
     font-size: 1em;
     font-weight: 400;
 }
@@ -160,7 +160,7 @@ main {
     font-size: 1em;
     font-weight: 400;
     margin-bottom: 2rem;
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
 }
 
 /* Research page styles */
@@ -168,7 +168,7 @@ main {
     font-size: 1em;
     font-weight: 400;
     margin-bottom: 2rem;
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
 }
 
 .research-entries {
@@ -191,13 +191,13 @@ main {
 
 .date {
     font-size: 1em;
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
     min-width: 100px;
     flex-shrink: 0;
 }
 
 .separator {
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
     font-size: 1em;
 }
 
@@ -236,8 +236,8 @@ main {
 .dataset-controls select {
     font-family: 'Computer Modern', serif;
     font-size: 1em;
-    color: rgb(17, 17, 17);
-    border: 1px solid rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     background-color: #FFFFFF;
     padding: 0.25rem 0.4rem;
 }
@@ -285,16 +285,16 @@ main {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
-    color: rgb(17, 17, 17);
+    color: rgb(0, 0, 0);
 }
 
 .dataset-gap-flag {
-    border: 1px solid rgb(17, 17, 17);
+    border: 1px solid rgb(0, 0, 0);
     padding: 0.05rem 0.3rem;
 }
 
 .dataset-detail {
-    border-top: 1px solid rgb(17, 17, 17);
+    border-top: 1px solid rgb(0, 0, 0);
     padding-top: 1rem;
 }
 
