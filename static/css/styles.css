@@ -1,3 +1,36 @@
+/* Computer Modern — original TeX serif (CMU) */
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('../fonts/computer-modern/cmunrm.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('../fonts/computer-modern/cmunti.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('../fonts/computer-modern/cmunbx.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('../fonts/computer-modern/cmunbi.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -6,7 +39,7 @@
 }
 
 body {
-    font-family: monospace;
+    font-family: 'Computer Modern', serif;
     background-color: #FFFFFF;
     color: rgb(39, 39, 39);
     line-height: 1.4;
@@ -188,7 +221,7 @@ main {
 
 .dataset-controls input[type="search"],
 .dataset-controls select {
-    font-family: monospace;
+    font-family: 'Computer Modern', serif;
     font-size: 1em;
     color: rgb(39, 39, 39);
     border: 1px solid rgb(39, 39, 39);
@@ -225,7 +258,7 @@ main {
     border: none;
     color: rgb(26, 13, 171);
     cursor: pointer;
-    font-family: monospace;
+    font-family: 'Computer Modern', serif;
     font-size: 1em;
     padding: 0;
     text-align: left;

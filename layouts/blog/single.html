@@ -2,6 +2,16 @@
 
 {{ define "head" }}
   <link rel="stylesheet" href="{{ "css/post-styles.css" | relURL }}">
+  {{ if .Params.latex }}
+  <link rel="stylesheet" href="{{ "css/latex-post.css" | relURL }}">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  {{ end }}
   {{ if .Params.plotly }}
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>

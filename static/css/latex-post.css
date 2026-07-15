@@ -1,0 +1,75 @@
+/* Styles for htlatex-compiled blog content — Tufte-inspired, site colorway */
+
+.latex-body {
+    color: rgb(39, 39, 39);
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.latex-body .sectionHead,
+.latex-body .subsectionHead {
+    font-weight: 400;
+    color: rgb(39, 39, 39);
+    margin: 2rem 0 0.75rem;
+}
+
+.latex-body .sectionHead .titlemark,
+.latex-body .subsectionHead .titlemark {
+    font-weight: 700;
+}
+
+.latex-body p.noindent,
+.latex-body p.indent {
+    margin-bottom: 1rem;
+}
+
+.latex-body a {
+    color: rgb(26, 13, 171);
+    text-decoration: none;
+}
+
+.latex-body a:hover {
+    text-decoration: underline;
+}
+
+.latex-body img,
+.latex-body svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.latex-body .caption,
+.latex-body .figcaption {
+    font-size: 0.85em;
+    color: rgb(39, 39, 39);
+    margin-top: 0.35rem;
+}
+
+.latex-body table {
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95em;
+}
+
+.latex-body td,
+.latex-body th {
+    padding: 0.2rem 0.6rem;
+    border-bottom: 1px solid rgb(39, 39, 39);
+}
+
+.latex-body .marginpar,
+.latex-body .marginnote {
+    font-size: 0.8em;
+    color: rgb(39, 39, 39);
+    font-style: italic;
+}
+
+.latex-body .math-display {
+    margin: 1rem 0 1.25rem;
+    overflow-x: auto;
+}
+
+.latex-body .tikzpicture {
+    display: block;
+    margin: 0 auto;
+}

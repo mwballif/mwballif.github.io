@@ -2,7 +2,7 @@
   {{ if .IsHome }}
     <h1 class="main-title">{{ .Site.Title }}</h1>
   {{ else }}
-    {{ $path := printf "/%s" .Site.Title }}
+    {{ $path := .Site.Title }}
     {{ $sectionTitle := "" }}
     {{ with .CurrentSection }}
       {{ $path = printf "%s/%s" $path .Title }}

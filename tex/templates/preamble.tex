@@ -1,0 +1,54 @@
+%% Shared Tufte-inspired preamble — matches site colorway
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[
+  paperwidth=6.5in,
+  top=1.4in,
+  bottom=1.4in,
+  left=1in,
+  right=2.75in,
+  marginparwidth=1.75in,
+  marginparsep=0.2in
+]{geometry}
+
+\usepackage{xcolor}
+\definecolor{textcolor}{RGB}{39,39,39}
+\definecolor{linkcolor}{RGB}{26,13,171}
+\definecolor{rulecolor}{RGB}{39,39,39}
+
+\usepackage[colorlinks=true,linkcolor=linkcolor,citecolor=linkcolor,urlcolor=linkcolor]{hyperref}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65\baselineskip}
+\color{textcolor}
+
+%% Section spacing (Tufte-inspired, no extra packages)
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}{1.25\baselineskip}{0.5\baselineskip}{\large\bfseries\color{textcolor}}}
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}{1\baselineskip}{0.35\baselineskip}{\normalsize\bfseries\color{textcolor}}}
+\makeatother
+
+%% Margin notes (Tufte sidenotes)
+\newcommand{\sidenote}[1]{\marginpar{\footnotesize\color{textcolor}#1}}
+
+%% TL;DR block
+\newcommand{\tldr}[1]{%
+  \noindent{\color{linkcolor}\textit{TL;DR}}\textit{ #1}\par\vspace{0.5\baselineskip}%
+}
+
+%% Figure styling
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont=bf,
+  textfont=it,
+  skip=0.5\baselineskip
+}
