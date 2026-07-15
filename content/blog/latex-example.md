@@ -13,7 +13,6 @@ class="ec-lmri-10x-x-109">Blog posts can be authored in LaTeX</span>
 class="ec-lmri-10x-x-109">and compiled to HTML with Tufte-style</span>
 <span 
 class="ec-lmri-10x-x-109">layout and site colors.</span>
-
 <h3 class="sectionHead"><span class="titlemark">1   </span>   <a 
  id="x1-10001"></a>Writing in LaTeX</h3>
 <!--l. 14--><p class="noindent" >This post is compiled from
@@ -22,24 +21,16 @@ class="ec-lmtt-10x-x-109">tex/blog/latex-example.tex</span>. Body text
 uses Computer Modern at the same gray
 tone as the rest of the site, and links use the
 site blue <span style="color:#1A0DAB;">rgb(26, 13, 171)</span>.
-
 <h3 class="sectionHead"><span class="titlemark">2   </span>   <a 
  id="x1-20002"></a>Math</h3>
 <!--l. 18--><p class="noindent" >Display equations render via MathJax:
 <div class="mathjax-env mathjax-equation">\begin{equation} y_i = \alpha + \beta x_i + \varepsilon _i, \qquad \varepsilon _i \sim \mathcal {N}(0, \sigma ^2). \end{equation}</div>
 <a 
  id="x1-2001r1"></a>
-
 <h3 class="sectionHead"><span class="titlemark">3   </span>   <a 
  id="x1-30003"></a>A TikZ figure</h3>
 <!--l. 25--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
-                                      
-
-                                      
-                                      
-
-                                      
 <!--l. 27--><p class="noindent" ><img 
 src="/blog/latex-example/0x.svg" alt="[Picture]" >
 <a 
@@ -54,30 +45,19 @@ class="ec-lmri-10">A  simple  TikZ  line  plot  in  site</span>
 <span 
 class="ec-lmri-10">colors.</span>
 </span></div><!--tex4ht:label?: x1-3001r1 -->
-                                      
-
-                                      
 <!--l. 36--><p class="noindent" ></div><hr class="endfigure">
 <div class="marginpar">
 <!--l. 38--><p class="noindent" ><span 
 class="ec-lmr-9">Margin notes echo Tufte&#8217;s sidenotes and sit in the</span>
 <span 
 class="ec-lmr-9">wide right margin.</span></div>
-
 <h3 class="sectionHead"><span class="titlemark">4   </span>   <a 
  id="x1-40004"></a>Tables</h3>
 <div class="table">
-                                      
-
-                                      
 <!--l. 42--><p class="noindent" ><hr class="float"><div class="float" 
 >
-                                      
-
-                                      
 <div class="tabular">
  <table id="TBL-1" class="tabular" 
- 
 ><colgroup id="TBL-1-1g"><col 
 id="TBL-1-1"><col 
 id="TBL-1-2"><col 
@@ -109,9 +89,6 @@ class="ec-lmbx-10">&#x00A0;1: </span></span><span
 class="content"><span 
 class="ec-lmri-10">Summary statistics.</span>
 </span></div><!--tex4ht:label?: x1-4001r1 -->
-                                      
-
-                                      
 </div><hr class="endfloat" />
 </div>
 </div>

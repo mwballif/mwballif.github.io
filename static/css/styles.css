@@ -120,7 +120,7 @@ main {
 }
 
 .left-section p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
     line-height: 1.3;
     font-size: 1em;
     font-weight: 400;
@@ -148,8 +148,10 @@ main {
 }
 
 .profile-photo {
+    display: block;
     width: 78%;
     height: auto;
+    margin-left: auto;
 }
 
 /* Blog list styles */

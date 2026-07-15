@@ -39,6 +39,20 @@ def rewrite_asset_paths(html: str, slug: str) -> str:
     return html
 
 
+def strip_blank_lines(html: str) -> str:
+    """Drop blank/whitespace-only lines from the compiled body.
+
+    tex4ht pads its output with blank lines inside what should be a single
+    HTML block. Goldmark's raw-HTML-block parser (CommonMark type 6/7)
+    terminates a block at the first blank line, so those blank lines cause
+    the rest of the fragment to fall back to regular markdown parsing
+    (smart quotes, paragraph wrapping, escaped tags) instead of passing
+    through untouched. Keeping the body blank-line-free makes it parse as
+    one continuous raw HTML block.
+    """
+    return "\n".join(line for line in html.splitlines() if line.strip())
+
+
 def compile_post(tex_path: Path) -> None:
     slug = tex_path.stem
     meta = parse_metadata(tex_path)
@@ -79,6 +93,7 @@ def compile_post(tex_path: Path) -> None:
 
     body = extract_body(html_path)
     body = rewrite_asset_paths(body, slug)
+    body = strip_blank_lines(body)
 
     asset_dir = STATIC_BLOG_DIR / slug
     asset_dir.mkdir(parents=True, exist_ok=True)
