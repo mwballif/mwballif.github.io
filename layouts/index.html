@@ -8,7 +8,7 @@
   <div class="home-content">
     <div class="left-section">
       {{ .Content }}
-      <p>You can find my <a href="{{ .Site.Params.cv_url | relURL }}" class="cv-link" target="_blank">CV here</a>.</p>
+      <p>You can find my <a href="{{ .Site.Params.cv_url | relURL }}" class="cv-link" target="_blank">Curriculum Vitae</a>.</p>
       <p>Email: <a href="mailto:{{ .Site.Params.email }}" class="email-link">{{ replace .Site.Params.email "@" " at " | replace "." " dot " }}</a></p>
     </div>
     <div class="right-section">

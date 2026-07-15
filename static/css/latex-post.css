@@ -1,15 +1,15 @@
 /* Styles for htlatex-compiled blog content — Tufte-inspired, site colorway */
 
 .latex-body {
-    color: rgb(39, 39, 39);
-    line-height: 1.5;
+    color: rgb(17, 17, 17);
+    line-height: 1.4;
     font-size: 0.9em;
 }
 
 .latex-body .sectionHead,
 .latex-body .subsectionHead {
     font-weight: 400;
-    color: rgb(39, 39, 39);
+    color: rgb(17, 17, 17);
     margin: 2rem 0 0.75rem;
 }
 
@@ -41,7 +41,7 @@
 .latex-body .caption,
 .latex-body .figcaption {
     font-size: 0.85em;
-    color: rgb(39, 39, 39);
+    color: rgb(17, 17, 17);
     margin-top: 0.35rem;
 }
 
@@ -54,13 +54,13 @@
 .latex-body td,
 .latex-body th {
     padding: 0.2rem 0.6rem;
-    border-bottom: 1px solid rgb(39, 39, 39);
+    border-bottom: 1px solid rgb(17, 17, 17);
 }
 
 .latex-body .marginpar,
 .latex-body .marginnote {
     font-size: 0.8em;
-    color: rgb(39, 39, 39);
+    color: rgb(17, 17, 17);
     font-style: italic;
 }
 
@@ -72,4 +72,47 @@
 .latex-body .tikzpicture {
     display: block;
     margin: 0 auto;
+}
+
+/* tex4ht float markers — invisible bounds, not real rules */
+.latex-body hr.figure,
+.latex-body hr.endfigure,
+.latex-body hr.float,
+.latex-body hr.endfloat {
+    display: none;
+}
+
+/* Book-style layout: a narrow reading column with true Tufte side margin
+   for notes and sidenotes, only on posts compiled from LaTeX. */
+.post-content-tufte {
+    max-width: 1060px;
+}
+
+.post-content-tufte .latex-body > * {
+    max-width: 640px;
+}
+
+.post-content-tufte .latex-body > .marginpar,
+.post-content-tufte .latex-body > .marginnote {
+    float: right;
+    clear: right;
+    max-width: none;
+    width: 280px;
+    margin: 0.2rem 0 1.25rem;
+    padding-left: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .post-content-tufte .latex-body > * {
+        max-width: 100%;
+    }
+
+    .post-content-tufte .latex-body > .marginpar,
+    .post-content-tufte .latex-body > .marginnote {
+        float: none;
+        width: auto;
+        margin: 1rem 0;
+        padding-left: 0.75rem;
+        border-left: 2px solid rgb(17, 17, 17);
+    }
 }

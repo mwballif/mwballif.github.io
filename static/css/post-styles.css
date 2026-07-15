@@ -27,7 +27,7 @@
     font-size: 0.9em;
     font-weight: 400;
     margin-bottom: 1rem;
-    color: rgb(39, 39, 39);
+    color: rgb(17, 17, 17);
 }
 
 .post-date {
@@ -37,7 +37,7 @@
 }
 
 .post-body {
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 400;
     font-size: 0.9em;
 }
@@ -50,7 +50,7 @@
     font-size: 0.9em;
     font-weight: 400;
     margin: 2.5rem 0 1rem 0;
-    color: rgb(39, 39, 39);
+    color: rgb(17, 17, 17);
 }
 
 .tldr {
