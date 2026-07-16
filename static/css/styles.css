@@ -126,15 +126,17 @@ main {
     font-weight: 400;
 }
 
-.cv-link, .email-link {
-    color: rgb(26, 13, 171);
-    text-decoration: none;
-    font-style: italic;
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
 }
 
-.cv-link:hover, .email-link:hover {
+.home-nav-link {
     color: rgb(26, 13, 171);
     text-decoration: underline;
+    font-style: normal;
 }
 
 .site-highlight {
