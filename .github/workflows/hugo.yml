@@ -2,7 +2,7 @@ name: Deploy Hugo to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "home-redesign"]
 
 permissions:
   contents: read
@@ -17,10 +17,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+
+      - name: Checkout home-redesign branch
+        uses: actions/checkout@v4
+        with:
+          ref: home-redesign
+          path: home-redesign-checkout
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -34,12 +41,12 @@ jobs:
       - name: Build main site
         run: hugo --minify
 
-      - name: Build test site
-        run: hugo --minify
-        working-directory: test_site_1
+      - name: Build home-redesign site
+        run: hugo --minify --baseURL "https://mwballif.github.io/test/"
+        working-directory: home-redesign-checkout
 
-      - name: Copy test site into output
-        run: cp -r test_site_1/public public/test
+      - name: Copy home-redesign site into output
+        run: cp -r home-redesign-checkout/public public/test
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
