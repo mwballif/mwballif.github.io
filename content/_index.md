@@ -1,3 +1,3 @@
 ---
 ---
-<span class="site-highlight">Mitchell Ballif</span> is an undergraduate at Brigham Young University studying Economics and Mathematics. Current interests include international macroeconomics, microfinance. I'm particularly interested in the role of financial institutions and innovation in economic growth and development.
+<span class="site-highlight">Mitchell Ballif</span> is an undergraduate at Brigham Young University studying Economics and Mathematics. His currentresearch intrests include International Macoeconomics and Macrofinance.
