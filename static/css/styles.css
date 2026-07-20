@@ -167,7 +167,7 @@ main {
 }
 
 .research-entries {
-    max-width: 360px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -175,7 +175,7 @@ main {
 
 .abstract-panel {
     margin-left: auto;
-    width: 320px;
+    width: 550px;
     position: sticky;
     top: 2rem;
     align-self: flex-start;
