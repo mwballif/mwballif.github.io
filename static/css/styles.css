@@ -50,8 +50,8 @@ body {
 /* Container and layout */
 .container {
     max-width: 960px;
-    margin: 0 auto 0 0;
-    padding: calc(2rem + 24px) 2rem 2rem calc(5rem + 24px);
+    margin: 0 auto;
+    padding: calc(2rem + 24px) 2rem;
 }
 
 .container-tufte {
@@ -117,7 +117,8 @@ main {
 .left-section {
     flex: 1;
     min-width: 0;
-    max-width: 460px;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .left-section p {
@@ -310,6 +311,10 @@ main {
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
+    }
+    
+    .left-section {
+        max-width: none;
     }
     
     header {
