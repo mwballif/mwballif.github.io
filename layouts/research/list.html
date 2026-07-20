@@ -1,0 +1,41 @@
+{{ define "title" }}Research - {{ .Site.Title }}{{ end }}
+
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="research-content">
+    <div class="research-entries">
+      <h2>Undergraduate Writing Samples</h2>
+      {{ range .Pages }}
+      <div class="research-entry" data-abstract="{{ with .Resources.GetMatch "abstract.md" }}{{ .Content }}{{ end }}" data-pdf="{{ with .Resources.GetMatch "*.pdf" }}{{ .RelPermalink }}{{ end }}">
+        <span class="research-title"><a href="{{ with .Resources.GetMatch "*.pdf" }}{{ .RelPermalink }}{{ end }}" target="_blank" rel="noopener">{{ .Title }}</a></span> <span class="research-meta">{{ .Params.class }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <div class="abstract-panel" id="abstract-panel">
+      <p class="abstract-placeholder">Hover over a paper title to view its abstract.</p>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      const entries = document.querySelectorAll('.research-entry');
+      const panel = document.getElementById('abstract-panel');
+
+      entries.forEach(function(entry) {
+        entry.addEventListener('mouseenter', function() {
+          const abstract = entry.getAttribute('data-abstract');
+          if (abstract) {
+            panel.innerHTML = '<div class="abstract-text">' + abstract + '</div>';
+          }
+        });
+
+        entry.addEventListener('mouseleave', function() {
+          panel.innerHTML = '<p class="abstract-placeholder">Hover over a paper title to view its abstract.</p>';
+        });
+      });
+    })();
+  </script>
+{{ end }}
