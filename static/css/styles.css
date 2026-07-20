@@ -159,6 +159,24 @@ main {
     gap: 0.3rem;
 }
 
+.research-title {
+    font-style: italic;
+    color: rgb(26, 13, 171);
+}
+
+.research-meta {
+    margin-left: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.research-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
 .blog-entries {
     display: flex;
     flex-direction: column;
