@@ -153,6 +153,10 @@ main {
     color: rgb(0, 0, 0);
 }
 
+.research-content {
+    max-width: 320px;
+}
+
 .research-entries {
     display: flex;
     flex-direction: column;
