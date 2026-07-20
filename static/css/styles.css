@@ -90,6 +90,10 @@ main {
     margin-top: 1rem;
 }
 
+.post-content {
+    max-width: 320px;
+}
+
 /* Home page layout */
 .home-content {
     display: flex;
@@ -138,6 +142,10 @@ main {
 }
 
 /* Blog list styles */
+.blog-list {
+    max-width: 320px;
+}
+
 .blog-list h2 {
     font-size: 1em;
     font-weight: 400;
