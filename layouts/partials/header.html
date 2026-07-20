@@ -1,10 +1,5 @@
 <header>
   {{ if not .IsHome }}
     <a href="{{ "/" | relURL }}" class="back-arrow"><-- home</a>
-    <nav class="top-nav">
-      <a href="{{ "research" | relURL }}">research</a>
-      <a href="{{ "code" | relURL }}">code</a>
-      <a href="{{ "blog" | relURL }}">blog</a>
-    </nav>
   {{ end }}
 </header>

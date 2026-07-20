@@ -85,22 +85,6 @@ header {
     text-decoration: none;
 }
 
-.top-nav {
-    display: flex;
-    gap: 2rem;
-}
-
-.top-nav a {
-    color: rgb(26, 13, 171);
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.top-nav a:hover {
-    color: rgb(26, 13, 171);
-    text-decoration: underline;
-}
-
 /* Main content */
 main {
     margin-top: 1rem;
@@ -326,10 +310,6 @@ main {
         font-size: 1em;
     }
     
-    .top-nav {
-        gap: 1rem;
-    }
-    
     .home-content {
         flex-direction: column;
         gap: 2rem;
@@ -352,10 +332,6 @@ main {
 
 /* Print styles */
 @media print {
-    .top-nav {
-        display: none;
-    }
-    
     body {
         font-size: 12pt;
     }
