@@ -14,9 +14,7 @@
       </div>
       {{ end }}
     </div>
-    <div class="abstract-panel" id="abstract-panel">
-      <p class="abstract-placeholder">Hover over a paper title to view its abstract.</p>
-    </div>
+    <div class="abstract-panel" id="abstract-panel"></div>
   </section>
 
   <script>
@@ -33,7 +31,7 @@
         });
 
         entry.addEventListener('mouseleave', function() {
-          panel.innerHTML = '<p class="abstract-placeholder">Hover over a paper title to view its abstract.</p>';
+          panel.innerHTML = '';
         });
       });
     })();
