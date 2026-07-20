@@ -91,7 +91,7 @@ main {
 }
 
 .post-content {
-    max-width: 420px;
+    max-width: 550px;
 }
 
 /* Home page layout */
@@ -105,7 +105,7 @@ main {
 .left-section {
     flex: 1;
     min-width: 0;
-    max-width: 420px;
+    max-width: 550px;
 }
 
 .left-section p {
@@ -143,7 +143,7 @@ main {
 
 /* Blog list styles */
 .blog-list {
-    max-width: 420px;
+    max-width: 550px;
 }
 
 .blog-list h2 {
@@ -162,7 +162,7 @@ main {
 }
 
 .research-content {
-    max-width: 420px;
+    max-width: 550px;
 }
 
 .research-entries {
