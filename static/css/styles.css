@@ -50,7 +50,7 @@ body {
 /* Container and layout */
 .container {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0;
     padding: calc(2rem + 24px);
 }
 
@@ -102,7 +102,6 @@ main {
     flex: 1;
     min-width: 0;
     max-width: 520px;
-    margin: 0 auto;
 }
 
 .left-section p {
