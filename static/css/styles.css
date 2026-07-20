@@ -177,14 +177,6 @@ main {
     text-decoration: none;
 }
 
-.research-entry {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin-bottom: 1.75rem;
-    flex-wrap: nowrap;
-}
-
 .blog-entries {
     display: flex;
     flex-direction: column;
