@@ -50,8 +50,8 @@ body {
 /* Container and layout */
 .container {
     max-width: 960px;
-    margin: 0 auto 0 0;
-    padding: calc(2rem + 24px) 2rem 2rem calc(5rem + 24px);
+    margin: 0;
+    padding: calc(2rem + 24px);
 }
 
 .container-tufte {
@@ -85,22 +85,6 @@ header {
     text-decoration: none;
 }
 
-.top-nav {
-    display: flex;
-    gap: 2rem;
-}
-
-.top-nav a {
-    color: rgb(26, 13, 171);
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.top-nav a:hover {
-    color: rgb(26, 13, 171);
-    text-decoration: underline;
-}
-
 /* Main content */
 main {
     margin-top: 1rem;
@@ -117,6 +101,7 @@ main {
 .left-section {
     flex: 1;
     min-width: 0;
+    max-width: 640px;
 }
 
 .left-section p {
@@ -126,15 +111,17 @@ main {
     font-weight: 400;
 }
 
-.cv-link, .email-link {
-    color: rgb(26, 13, 171);
-    text-decoration: none;
-    font-style: italic;
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
 }
 
-.cv-link:hover, .email-link:hover {
+.home-nav-link {
     color: rgb(26, 13, 171);
     text-decoration: underline;
+    font-style: normal;
 }
 
 .site-highlight {
@@ -142,16 +129,12 @@ main {
     font-style: italic;
 }
 
-.right-section {
-    flex: 0 0 300px;
-    flex-shrink: 0;
-}
-
 .profile-photo {
     display: block;
-    width: 78%;
+    width: 210px;
+    max-width: 100%;
     height: auto;
-    margin-left: auto;
+    margin-top: 1.75rem;
 }
 
 /* Blog list styles */
@@ -313,6 +296,10 @@ main {
         padding: 1rem;
     }
     
+    .left-section {
+        max-width: none;
+    }
+    
     header {
         flex-direction: column;
         gap: 1rem;
@@ -323,22 +310,11 @@ main {
         font-size: 1em;
     }
     
-    .top-nav {
-        gap: 1rem;
-    }
-    
     .home-content {
         flex-direction: column;
         gap: 2rem;
     }
-    
-    .right-section {
-        flex: none;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
+
     .blog-entry {
         flex-direction: column;
         gap: 0.5rem;
@@ -356,10 +332,6 @@ main {
 
 /* Print styles */
 @media print {
-    .top-nav {
-        display: none;
-    }
-    
     body {
         font-size: 12pt;
     }

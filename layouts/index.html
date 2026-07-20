@@ -8,9 +8,11 @@
   <div class="home-content">
     <div class="left-section">
       {{ .Content }}
-      <p>Here is my <a href="{{ .Site.Params.cv_url | relURL }}" class="cv-link" target="_blank">Curriculum Vitae</a>.</p>
-    </div>
-    <div class="right-section">
+      <nav class="home-nav">
+        <a href="{{ .Site.Params.cv_url | relURL }}" class="home-nav-link" target="_blank">Curriculum Vitae</a>
+        <a href="{{ "research" | relURL }}" class="home-nav-link">Research</a>
+        <a href="{{ "blog" | relURL }}" class="home-nav-link">Blog</a>
+      </nav>
       <img src="{{ .Site.Params.profile_image | relURL }}" alt="{{ .Site.Title }}" class="profile-photo">
     </div>
   </div>

@@ -17,17 +17,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Checkout home-redesign branch
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: home-redesign
-          path: home-redesign-checkout
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -38,15 +32,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Build main site
+      - name: Build site
         run: hugo --minify
-
-      - name: Build home-redesign site
-        run: hugo --minify --baseURL "https://mwballif.github.io/test/"
-        working-directory: home-redesign-checkout
-
-      - name: Copy home-redesign site into output
-        run: cp -r home-redesign-checkout/public public/test
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
