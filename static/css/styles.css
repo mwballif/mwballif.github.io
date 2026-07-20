@@ -105,7 +105,7 @@ main {
 .left-section {
     flex: 1;
     min-width: 0;
-    max-width: 550px;
+    max-width: 520px;
 }
 
 .left-section p {
@@ -162,7 +162,7 @@ main {
 }
 
 .research-content {
-    max-width: 550px;
+    max-width: 320px;
 }
 
 .research-entries {
