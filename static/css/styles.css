@@ -49,7 +49,7 @@ body {
 
 /* Container and layout */
 .container {
-    max-width: 960px;
+    max-width: 1400px;
     margin: 0;
     padding: 56px 2rem 56px 112px;
 }
@@ -162,10 +162,14 @@ main {
 }
 
 .research-content {
-    max-width: 550px;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
 }
 
 .research-entries {
+    max-width: 550px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -187,6 +191,22 @@ main {
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
+}
+
+.abstract-panel {
+    width: 550px;
+    border-left: 1px solid rgb(0, 0, 0);
+    padding-left: 1.5rem;
+}
+
+.abstract-panel:empty {
+    display: none;
+}
+
+.abstract-text {
+    font-size: 1em;
+    line-height: 1.3;
+    color: rgb(0, 0, 0);
 }
 
 .blog-entries {
@@ -352,6 +372,19 @@ main {
     
     .date {
         min-width: auto;
+    }
+
+    .research-content {
+        flex-direction: column;
+    }
+
+    .abstract-panel {
+        width: auto;
+        margin-top: 0 !important;
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgb(0, 0, 0);
+        padding-top: 1rem;
     }
 
     .dataset-controls {

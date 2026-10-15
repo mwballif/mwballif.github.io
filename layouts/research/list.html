@@ -27,6 +27,7 @@
           const abstract = entry.getAttribute('data-abstract');
           if (abstract) {
             panel.innerHTML = '<div class="abstract-text">' + abstract + '</div>';
+            panel.style.marginTop = (entry.getBoundingClientRect().top - panel.parentElement.getBoundingClientRect().top) + 'px';
           }
         });
 
