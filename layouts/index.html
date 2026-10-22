@@ -1,5 +1,28 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }}
 
+{{ define "head" }}
+  {{ $person := dict
+    "@type" "Person"
+    "@id" (print .Site.BaseURL "#person")
+    "name" .Site.Title
+    "url" .Site.BaseURL
+    "image" (.Site.Params.profile_image | absURL)
+    "email" (print "mailto:" .Site.Params.email)
+    "description" "Undergraduate at Brigham Young University studying Economics and Mathematics, with research interests in International Macroeconomics and Macrofinance."
+    "affiliation" (dict "@type" "CollegeOrUniversity" "name" "Brigham Young University" "url" "https://www.byu.edu/")
+    "knowsAbout" (slice "Economics" "Mathematics" "International Macroeconomics" "Macrofinance")
+    "sameAs" (slice "https://github.com/mwballif" "https://www.linkedin.com/in/mitchell-ballif")
+  }}
+  {{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "ProfilePage"
+    "url" .Site.BaseURL
+    "name" .Site.Title
+    "mainEntity" $person
+  }}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{ end }}
+
 {{ define "header" }}
   {{ partial "header.html" . }}
 {{ end }}
