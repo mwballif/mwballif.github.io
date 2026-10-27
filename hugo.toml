@@ -1,6 +1,7 @@
 baseURL = "https://mwballif.github.io/"
 languageCode = "en-us"
 title = "Mitchell Ballif"
+enableRobotsTXT = true
 
 [markup]
   [markup.goldmark]
